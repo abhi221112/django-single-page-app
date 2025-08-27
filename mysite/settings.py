@@ -88,9 +88,11 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
+import os
 # Static files (even if unused, required in production)
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = str(BASE_DIR / 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
